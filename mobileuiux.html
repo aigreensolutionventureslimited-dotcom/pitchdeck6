@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IXLAXXIX Concept Investment Slide</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    /* Base Styles */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #000;
+        color: #FFD700;
+        overflow-x: hidden;
+    }
+
+    .slide {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        transition: transform 0.5s ease;
+    }
+
+    .logo img {
+        max-width: 120px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-family: 'Merriweather', serif;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #FFD700;
+    }
+
+    h2 {
+        font-family: 'Merriweather', serif;
+        font-size: 22px;
+        margin: 20px 0 10px;
+        border-left: 4px solid #FFD700;
+        padding-left: 12px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #fff;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin: 10px 0;
+        color: #fff;
+    }
+
+    ul li {
+        margin-bottom: 8px;
+    }
+
+    /* Slide navigation */
+    .slides-container {
+        display: flex;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+    }
+
+    .slide {
+        scroll-snap-align: start;
+        min-width: 100%;
+    }
+
+    .nav-buttons {
+        position: fixed;
+        bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+
+    .nav-buttons button {
+        background: #FFD700;
+        color: #000;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    /* Profit Calculator */
+    .calculator {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .calculator input {
+        padding: 10px;
+        font-size: 16px;
+        width: 100px;
+        border-radius: 6px;
+        border: none;
+        text-align: center;
+    }
+
+    .calculator button {
+        padding: 10px 15px;
+        font-size: 16px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: #FFD700;
+        color: #000;
+        cursor: pointer;
+    }
+
+    .profit-output {
+        margin-top: 15px;
+        font-size: 18px;
+        color: #FFD700;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="slides-container">
+
+    <!-- Slide 1: Logo + Title -->
+    <div class="slide">
+        <div class="logo">
+            <img src="https://i.postimg.cc/wMwGVrQn/Chat-GPT-Image-Jan-10-2026-02-28-18-AM.png" alt="IXLAXXIX Logo">
+        </div>
+        <h1>IXLAXXIX Concept Investment Proposal</h1>
+        <p>REF: IX-LOAN-2026-001 | Date: Jan 26, 2026</p>
+    </div>
+
+    <!-- Slide 2: Parties -->
+    <div class="slide">
+        <h2>1. Parties</h2>
+        <p><strong>Lender:</strong> Al Green Solution Ventures Limited</p>
+        <p><strong>Recipient:</strong> CEO, IXLAXXIX Concept</p>
+    </div>
+
+    <!-- Slide 3: Executive Summary -->
+    <div class="slide">
+        <h2>2. Executive Summary</h2>
+        <p>
+            Capital Request: <strong>₦60,000</strong><br>
+            Funds will scale infrastructure, deploy the exclusive meet-up site, and activate VIP subscriptions.
+        </p>
+    </div>
+
+    <!-- Slide 4: Capital Allocation -->
+    <div class="slide">
+        <h2>3. Capital Allocation</h2>
+        <ul>
+            <li>Finalize digital platform & secure meet-up infrastructure</li>
+            <li>Market activation & user acquisition for VIP subscriptions</li>
+            <li>Operational bridging for high-volume traffic & verification</li>
+        </ul>
+    </div>
+
+    <!-- Slide 5: Repayment & Equity -->
+    <div class="slide">
+        <h2>4. Repayment & Equity</h2>
+        <h3>A. Principal (24 Months)</h3>
+        <ul>
+            <li>Total Principal: ₦60,000 (Full Return)</li>
+            <li>Monthly installments</li>
+            <li>Funds deducted from platform profits</li>
+            <li>Duration: 24 months</li>
+        </ul>
+        <h3>B. Equity Participation</h3>
+        <ul>
+            <li>VIP Revenue: 15% to Al Green Solution Ventures</li>
+            <li>Total Project Funds: 15% to Al Green Solution Ventures</li>
+        </ul>
+    </div>
+
+    <!-- Slide 6: Commitment + Profit Calculator -->
+    <div class="slide">
+        <h2>5. Commitment & Profit Calculator</h2>
+        <p>Full transparency in all reporting. Capital injection triggers revenue phase.</p>
+        <div class="calculator">
+            <label>Subscribers: </label>
+            <input type="number" id="subscribers" value="1000000">
+            <button onclick="calculateProfit()">Calculate Profit</button>
+            <div class="profit-output" id="profit-output"></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="nav-buttons">
+    <button onclick="prevSlide()">‹ Prev</button>
+    <button onclick="nextSlide()">Next ›</button>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+        if(index < 0) index = 0;
+        if(index >= slides.length) index = slides.length - 1;
+        slides.forEach((slide, i) => {
+            slide.style.transform = `translateX(-${index * 100}vw)`;
+        });
+        currentSlide = index;
+    }
+
+    function nextSlide() { showSlide(currentSlide + 1); }
+    function prevSlide() { showSlide(currentSlide - 1); }
+
+    function calculateProfit() {
+        const subscribers = parseInt(document.getElementById('subscribers').value);
+        const vipPrice = 1000; // Naira per VIP subscriber
+        const companyShare = 0.85; // 85% stays with company
+        const profit = subscribers * vipPrice * companyShare;
+        document.getElementById('profit-output').innerText = `Estimated Company Profit: ₦${profit.toLocaleString()}`;
+    }
+</script>
+
+</body>
+</html>
