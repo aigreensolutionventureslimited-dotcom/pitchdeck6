@@ -3,236 +3,229 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IXLAXXIX Concept Investment Slide</title>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<title>Vorne Gallery | Luxury Art & Premium Collections</title>
+
+<meta name="description" content="Vorne Gallery is a luxury art and premium collection storefront serving Abuja, Lagos and the United Kingdom. Discover rare artworks, curated collections and exclusive gallery pieces.">
+
+<meta name="keywords" content="Luxury gallery Abuja, Art gallery Lagos, UK luxury art store, Buy art Nigeria, Premium gallery Abuja, Vorne Gallery">
+
+<meta name="author" content="Vorne Gallery">
+
+<!-- SEO GEO TAGS -->
+<meta name="geo.region" content="NG">
+<meta name="geo.placename" content="Abuja, Lagos, United Kingdom">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Vorne Gallery | Luxury Art Store">
+<meta property="og:description" content="Exclusive luxury art collections available globally.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
-    /* Base Styles */
-    body, html {
-        margin: 0;
-        padding: 0;
-        font-family: 'Open Sans', sans-serif;
-        background-color: #000;
-        color: #FFD700;
-        overflow-x: hidden;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .slide {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 30px 20px;
-        box-sizing: border-box;
-        transition: transform 0.5s ease;
-    }
+body{
+font-family: 'Inter', sans-serif;
+background:#000;
+color:#fff;
+line-height:1.6;
+}
 
-    .logo img {
-        max-width: 120px;
-        margin-bottom: 20px;
-    }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
 
-    h1 {
-        font-family: 'Merriweather', serif;
-        font-size: 28px;
-        text-align: center;
-        margin-bottom: 10px;
-        color: #FFD700;
-    }
+.logo{
+font-family:'Playfair Display', serif;
+font-size:28px;
+letter-spacing:3px;
+color:#d4af37;
+}
 
-    h2 {
-        font-family: 'Merriweather', serif;
-        font-size: 22px;
-        margin: 20px 0 10px;
-        border-left: 4px solid #FFD700;
-        padding-left: 12px;
-    }
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:30px;
+font-size:14px;
+letter-spacing:1px;
+transition:0.3s;
+}
 
-    p {
-        font-size: 16px;
-        line-height: 1.6;
-        color: #fff;
-        margin: 10px 0;
-        text-align: center;
-    }
+nav a:hover{
+color:#d4af37;
+}
 
-    ul {
-        list-style-type: disc;
-        padding-left: 20px;
-        margin: 10px 0;
-        color: #fff;
-    }
+.hero{
+height:90vh;
+background:url('https://images.unsplash.com/photo-1541961017774-22349e4a1262') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
 
-    ul li {
-        margin-bottom: 8px;
-    }
+.hero h1{
+font-family:'Playfair Display', serif;
+font-size:60px;
+letter-spacing:3px;
+}
 
-    /* Slide navigation */
-    .slides-container {
-        display: flex;
-        overflow-x: hidden;
-        scroll-snap-type: x mandatory;
-    }
+.hero p{
+margin-top:15px;
+font-size:18px;
+color:#ddd;
+}
 
-    .slide {
-        scroll-snap-align: start;
-        min-width: 100%;
-    }
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 40px;
+border:1px solid #d4af37;
+color:#d4af37;
+text-decoration:none;
+letter-spacing:2px;
+transition:0.4s;
+}
 
-    .nav-buttons {
-        position: fixed;
-        bottom: 20px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 30px;
-        box-sizing: border-box;
-    }
+.btn:hover{
+background:#d4af37;
+color:#000;
+}
 
-    .nav-buttons button {
-        background: #FFD700;
-        color: #000;
-        border: none;
-        padding: 12px 20px;
-        font-size: 16px;
-        border-radius: 8px;
-        cursor: pointer;
-    }
+.section{
+padding:80px 8%;
+}
 
-    /* Profit Calculator */
-    .calculator {
-        margin-top: 20px;
-        text-align: center;
-    }
+.section h2{
+font-family:'Playfair Display', serif;
+font-size:36px;
+margin-bottom:40px;
+text-align:center;
+color:#d4af37;
+}
 
-    .calculator input {
-        padding: 10px;
-        font-size: 16px;
-        width: 100px;
-        border-radius: 6px;
-        border: none;
-        text-align: center;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
 
-    .calculator button {
-        padding: 10px 15px;
-        font-size: 16px;
-        margin-left: 10px;
-        border: none;
-        border-radius: 6px;
-        background-color: #FFD700;
-        color: #000;
-        cursor: pointer;
-    }
+.card{
+background:#111;
+padding:20px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s;
+}
 
-    .profit-output {
-        margin-top: 15px;
-        font-size: 18px;
-        color: #FFD700;
-    }
+.card:hover{
+transform:translateY(-10px);
+border-color:#d4af37;
+}
 
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+.card h3{
+font-size:18px;
+margin-bottom:5px;
+}
+
+.card p{
+font-size:14px;
+color:#bbb;
+}
+
+.price{
+margin-top:10px;
+color:#d4af37;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:40px;
+border-top:1px solid rgba(255,255,255,0.1);
+font-size:14px;
+color:#aaa;
+}
 </style>
 </head>
+
 <body>
 
-<div class="slides-container">
+<header>
+<div class="logo">VORNE</div>
+<nav>
+<a href="#">Home</a>
+<a href="#">Collections</a>
+<a href="#">Artists</a>
+<a href="#">Shop</a>
+<a href="#">Exhibitions</a>
+<a href="#">Contact</a>
+</nav>
+</header>
 
-    <!-- Slide 1: Logo + Title -->
-    <div class="slide">
-        <div class="logo">
-            <img src="https://i.postimg.cc/wMwGVrQn/Chat-GPT-Image-Jan-10-2026-02-28-18-AM.png" alt="IXLAXXIX Logo">
-        </div>
-        <h1>IXLAXXIX Concept Investment Proposal</h1>
-        <p>REF: IX-LOAN-2026-001 | Date: Jan 26, 2026</p>
-    </div>
+<section class="hero">
+<div>
+<h1>VORNE GALLERY</h1>
+<p>Luxury Art • Exclusive Collections • Global Delivery</p>
+<a href="#" class="btn">Explore Collection</a>
+</div>
+</section>
 
-    <!-- Slide 2: Parties -->
-    <div class="slide">
-        <h2>1. Parties</h2>
-        <p><strong>Lender:</strong> Al Green Solution Ventures Limited</p>
-        <p><strong>Recipient:</strong> CEO, IXLAXXIX Concept</p>
-    </div>
+<section class="section">
+<h2>Featured Collections</h2>
+<div class="grid">
 
-    <!-- Slide 3: Executive Summary -->
-    <div class="slide">
-        <h2>2. Executive Summary</h2>
-        <p>
-            Capital Request: <strong>₦60,000</strong><br>
-            Funds will scale infrastructure, deploy the exclusive meet-up site, and activate VIP subscriptions.
-        </p>
-    </div>
-
-    <!-- Slide 4: Capital Allocation -->
-    <div class="slide">
-        <h2>3. Capital Allocation</h2>
-        <ul>
-            <li>Finalize digital platform & secure meet-up infrastructure</li>
-            <li>Market activation & user acquisition for VIP subscriptions</li>
-            <li>Operational bridging for high-volume traffic & verification</li>
-        </ul>
-    </div>
-
-    <!-- Slide 5: Repayment & Equity -->
-    <div class="slide">
-        <h2>4. Repayment & Equity</h2>
-        <h3>A. Principal (24 Months)</h3>
-        <ul>
-            <li>Total Principal: ₦60,000 (Full Return)</li>
-            <li>Monthly installments</li>
-            <li>Funds deducted from platform profits</li>
-            <li>Duration: 24 months</li>
-        </ul>
-        <h3>B. Equity Participation</h3>
-        <ul>
-            <li>VIP Revenue: 15% to Al Green Solution Ventures</li>
-            <li>Total Project Funds: 15% to Al Green Solution Ventures</li>
-        </ul>
-    </div>
-
-    <!-- Slide 6: Commitment + Profit Calculator -->
-    <div class="slide">
-        <h2>5. Commitment & Profit Calculator</h2>
-        <p>Full transparency in all reporting. Capital injection triggers revenue phase.</p>
-        <div class="calculator">
-            <label>Subscribers: </label>
-            <input type="number" id="subscribers" value="1000000">
-            <button onclick="calculateProfit()">Calculate Profit</button>
-            <div class="profit-output" id="profit-output"></div>
-        </div>
-    </div>
-
+<div class="card">
+<img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9">
+<h3>Royal Abstract</h3>
+<p>Limited edition masterpiece</p>
+<div class="price">$1,200</div>
 </div>
 
-<div class="nav-buttons">
-    <button onclick="prevSlide()">‹ Prev</button>
-    <button onclick="nextSlide()">Next ›</button>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1549887534-1541e9326642">
+<h3>Golden Horizon</h3>
+<p>Luxury framed artwork</p>
+<div class="price">$980</div>
 </div>
 
-<script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
+<div class="card">
+<img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d">
+<h3>Midnight Sculpture</h3>
+<p>Collector’s premium piece</p>
+<div class="price">$2,450</div>
+</div>
 
-    function showSlide(index) {
-        if(index < 0) index = 0;
-        if(index >= slides.length) index = slides.length - 1;
-        slides.forEach((slide, i) => {
-            slide.style.transform = `translateX(-${index * 100}vw)`;
-        });
-        currentSlide = index;
-    }
+</div>
+</section>
 
-    function nextSlide() { showSlide(currentSlide + 1); }
-    function prevSlide() { showSlide(currentSlide - 1); }
+<section class="section">
+<h2>About Vorne</h2>
+<p style="text-align:center; max-width:800px; margin:auto; color:#ccc;">
+Vorne Gallery is a luxury art storefront dedicated to collectors, investors and enthusiasts seeking exclusive premium pieces. We curate rare artworks, sculptures and limited collections for elite clients across Nigeria and the United Kingdom.
+</p>
+</section>
 
-    function calculateProfit() {
-        const subscribers = parseInt(document.getElementById('subscribers').value);
-        const vipPrice = 1000; // Naira per VIP subscriber
-        const companyShare = 0.85; // 85% stays with company
-        const profit = subscribers * vipPrice * companyShare;
-        document.getElementById('profit-output').innerText = `Estimated Company Profit: ₦${profit.toLocaleString()}`;
-    }
-</script>
+<footer>
+© 2026 Vorne Gallery — Luxury Redefined
+</footer>
 
 </body>
 </html>
