@@ -1,231 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maritime Psychology & SMS | Anointed E. Okowhaoke</title>
+    <style>
+        :root {
+            --maritime-blue: #002147;
+            --gold: #d4af37;
+            --anchor-white: #f4f7f6;
+            --emergency-red: #b22222;
+            --sea-glass: #20b2aa;
+        }
 
-<title>Vorne Gallery | Luxury Art & Premium Collections</title>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
-<meta name="description" content="Vorne Gallery is a luxury art and premium collection storefront serving Abuja, Lagos and the United Kingdom. Discover rare artworks, curated collections and exclusive gallery pieces.">
+        header {
+            background: linear-gradient(rgba(0, 33, 71, 0.9), rgba(0, 33, 71, 0.9)), 
+                        url('https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1200') center/cover;
+            color: var(--gold);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+        }
 
-<meta name="keywords" content="Luxury gallery Abuja, Art gallery Lagos, UK luxury art store, Buy art Nigeria, Premium gallery Abuja, Vorne Gallery">
+        .matric-badge {
+            background: var(--gold);
+            color: var(--maritime-blue);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
 
-<meta name="author" content="Vorne Gallery">
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 4px;
+        }
 
-<!-- SEO GEO TAGS -->
-<meta name="geo.region" content="NG">
-<meta name="geo.placename" content="Abuja, Lagos, United Kingdom">
+        .section-title {
+            color: var(--maritime-blue);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-<!-- Open Graph -->
-<meta property="og:title" content="Vorne Gallery | Luxury Art Store">
-<meta property="og:description" content="Exclusive luxury art collections available globally.">
-<meta property="og:type" content="website">
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+        .card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 4px solid var(--maritime-blue);
+            border-radius: 4px;
+        }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+        .case-study-box {
+            background: #fffdf2;
+            border: 1px solid var(--gold);
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+        }
 
-body{
-font-family: 'Inter', sans-serif;
-background:#000;
-color:#fff;
-line-height:1.6;
-}
+        .case-study-box::before {
+            content: "LAGOS SECTOR REPORT";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--gold);
+            color: white;
+            padding: 2px 10px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 8%;
-border-bottom:1px solid rgba(255,255,255,0.1);
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
 
-.logo{
-font-family:'Playfair Display', serif;
-font-size:28px;
-letter-spacing:3px;
-color:#d4af37;
-}
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
 
-nav a{
-color:#fff;
-text-decoration:none;
-margin-left:30px;
-font-size:14px;
-letter-spacing:1px;
-transition:0.3s;
-}
+        th { background: var(--maritime-blue); color: white; }
 
-nav a:hover{
-color:#d4af37;
-}
+        .interactive-sim {
+            text-align: center;
+            padding: 40px;
+            background: var(--maritime-blue);
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
 
-.hero{
-height:90vh;
-background:url('https://images.unsplash.com/photo-1541961017774-22349e4a1262') center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
+        .btn {
+            background: var(--gold);
+            color: var(--maritime-blue);
+            border: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
 
-.hero h1{
-font-family:'Playfair Display', serif;
-font-size:60px;
-letter-spacing:3px;
-}
+        .btn:hover { background: #fff; }
 
-.hero p{
-margin-top:15px;
-font-size:18px;
-color:#ddd;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 40px;
-border:1px solid #d4af37;
-color:#d4af37;
-text-decoration:none;
-letter-spacing:2px;
-transition:0.4s;
-}
-
-.btn:hover{
-background:#d4af37;
-color:#000;
-}
-
-.section{
-padding:80px 8%;
-}
-
-.section h2{
-font-family:'Playfair Display', serif;
-font-size:36px;
-margin-bottom:40px;
-text-align:center;
-color:#d4af37;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card{
-background:#111;
-padding:20px;
-border:1px solid rgba(255,255,255,0.08);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-border-color:#d4af37;
-}
-
-.card img{
-width:100%;
-height:300px;
-object-fit:cover;
-margin-bottom:15px;
-}
-
-.card h3{
-font-size:18px;
-margin-bottom:5px;
-}
-
-.card p{
-font-size:14px;
-color:#bbb;
-}
-
-.price{
-margin-top:10px;
-color:#d4af37;
-font-weight:bold;
-}
-
-footer{
-text-align:center;
-padding:40px;
-border-top:1px solid rgba(255,255,255,0.1);
-font-size:14px;
-color:#aaa;
-}
-</style>
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #777;
+            background: #eee;
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
-<div class="logo">VORNE</div>
-<nav>
-<a href="#">Home</a>
-<a href="#">Collections</a>
-<a href="#">Artists</a>
-<a href="#">Shop</a>
-<a href="#">Exhibitions</a>
-<a href="#">Contact</a>
-</nav>
+    <h1>Maritime Psychology & Safety Management Systems</h1>
+    <p>The Human Element Variable in Modern Seafaring</p>
+    <div class="matric-badge">CADET: Anointed Ephraim Okowhaoke | 2024/NSC/HND/035</div>
 </header>
 
-<section class="hero">
-<div>
-<h1>VORNE GALLERY</h1>
-<p>Luxury Art • Exclusive Collections • Global Delivery</p>
-<a href="#" class="btn">Explore Collection</a>
+<div class="container">
+    <h2 class="section-title">1. Statement of the Problem</h2>
+    <p>While <strong>SOLAS</strong> and <strong>MARPOL</strong> provide the hardware and environmental rules, the <strong>"Human Element"</strong> remains the most volatile variable. We are witnessing a transition from the traditional camaraderie of the sea to a modern <strong>"Cabin Culture."</strong></p>
+    
+    <div class="problem-grid">
+        <div class="card">
+            <h3>Cognitive Attrition</h3>
+            <p>Socio-technical isolation causes "micro-lapses" in concentration, leading to a loss of situational awareness during high-traffic maneuvers.</p>
+        </div>
+        <div class="card">
+            <h3>Regulatory Lag</h3>
+            <p>The MLC focuses on calories and hours of rest, but ignores <strong>"Social Health,"</strong> leaving psychological safety unmonitored in current SMS protocols.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">2. Case Study: The "Lagos Anchorage" Incident</h2>
+    <div class="case-study-box">
+        <p><strong>Location:</strong> Lagos Safe Anchorage Area (SAA) / Commodore Pool.<br>
+        <strong>Vessel:</strong> 15,000 TEU Container Carrier.<br>
+        <strong>Context:</strong> Intense traffic of fishing trawlers, bunker barges, and incoming/outgoing vessels.</p>
+        
+        <p><em>The Event:</em> During a night transit through the Lagos pilotage channel, the Second Officer (OOW) fell into a state of <strong>"Cognitive Fog."</strong> Despite an Able Seaman (AB) being present on the bridge, there was <strong>zero verbal communication</strong> for 45 minutes. Both were experiencing "Socio-Technical Seclusion," preferring digital isolation over professional bonding.</p>
+        
+        <p><strong>Outcome:</strong> A near-miss with a local fishing vessel was only averted when the Master heard the VHF alarm and intervened. The root cause was not lack of sleep, but <strong>Social Detachment</strong> causing a breakdown in Bridge Resource Management (BRM).</p>
+    </div>
+
+    <h2 class="section-title">3. Research Objectives</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Objective</th>
+                <th>Focus Area</th>
+                <th>Goal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data Correlation</td>
+                <td>Social Hours vs. Error Rates</td>
+                <td>Prove that lonely crews make more mistakes.</td>
+            </tr>
+            <tr>
+                <td>SMS Evaluation</td>
+                <td>Safety Management Systems</td>
+                <td>Integrate "Social Cohesion" into ship safety audits.</td>
+            </tr>
+            <tr>
+                <td>Policy Proposal</td>
+                <td>Digital-Social Balance</td>
+                <td>Implement designated "WiFi-Free" social bonding hours.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="interactive-sim">
+        <h2>Bridge Resource Management Simulator</h2>
+        <p>How does <strong>Social Cohesion</strong> affect reaction time on the Lagos coast?</p>
+        <button class="btn" onclick="testSafety()">Simulate Bridge Communication</button>
+        <div id="sim-result" style="margin-top:20px; font-weight:bold; height: 50px;"></div>
+    </div>
+
+    <footer>
+        Submitted to the Department of Nautical Science<br>
+        <strong>Federal College of Fisheries and Marine Technology, Lagos</strong><br>
+        &copy; 2026 Anointed Ephraim Okowhaoke
+    </footer>
 </div>
-</section>
 
-<section class="section">
-<h2>Featured Collections</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9">
-<h3>Royal Abstract</h3>
-<p>Limited edition masterpiece</p>
-<div class="price">$1,200</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1549887534-1541e9326642">
-<h3>Golden Horizon</h3>
-<p>Luxury framed artwork</p>
-<div class="price">$980</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d">
-<h3>Midnight Sculpture</h3>
-<p>Collector’s premium piece</p>
-<div class="price">$2,450</div>
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<h2>About Vorne</h2>
-<p style="text-align:center; max-width:800px; margin:auto; color:#ccc;">
-Vorne Gallery is a luxury art storefront dedicated to collectors, investors and enthusiasts seeking exclusive premium pieces. We curate rare artworks, sculptures and limited collections for elite clients across Nigeria and the United Kingdom.
-</p>
-</section>
-
-<footer>
-© 2026 Vorne Gallery — Luxury Redefined
-</footer>
+<script>
+    function testSafety() {
+        const out = document.getElementById('sim-result');
+        out.innerHTML = "Navigating Lagos Channel... Analyzing Crew Interaction...";
+        setTimeout(() => {
+            out.innerHTML = "⚠️ <span style='color:var(--gold)'>ALERT:</span> Low Social Cohesion detected. Communication breakdown. <br>Reaction Delay: +2.5 Seconds. <span style='color:var(--emergency-red)'>Risk Level: CRITICAL.</span>";
+        }, 1500);
+    }
+</script>
 
 </body>
 </html>
